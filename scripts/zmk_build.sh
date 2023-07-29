@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+HOST_ZMK_DIR=~/projects/zmk
+HOST_CONFIG_DIR=~/projects/zmk-config
+OUTPUT_DIR=~/Downloads/firmware
+LOG_DIR=~/Downloads/firmware
+
+
 # Parse input arguments
 while [[ $# -gt 0 ]]; do
     case $1 in
@@ -90,7 +96,7 @@ done
 [[ -z $CLEAR_CACHE ]] && CLEAR_CACHE="false"
 
 DOCKER_IMG="zmkfirmware/zmk-dev-arm:$ZEPHYR_VERSION"
-DOCKER_BIN="$SUDO podman"
+DOCKER_BIN="$SUDO docker"
 
 # +-------------------------+
 # | AUTOMATE CONFIG OPTIONS |
@@ -197,3 +203,4 @@ do
     compile_board $board
 done
 
+echo "firmware created at: $OUTPUT_DIR"
