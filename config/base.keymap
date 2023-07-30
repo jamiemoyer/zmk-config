@@ -219,7 +219,7 @@ ZMK_BEHAVIOR(rpar_gt, mod_morph,
 // tap: copy | double-tap: cut
 ZMK_BEHAVIOR(copy_cut, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LCMD(INS)>, <&kp LCMD(X)>;
+    bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
 // Windows sleep key
