@@ -136,7 +136,7 @@ ZMK_BEHAVIOR(smart_mouse, tri_state,
 
 // Alt+Tab swapper, requires PR #1366
 ZMK_BEHAVIOR(swapper, tri_state,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    bindings = <&kt LCMD>, <&kp TAB>, <&kt LCMD>;
     ignored-key-positions = <LT2>;
 )
 
@@ -219,7 +219,7 @@ ZMK_BEHAVIOR(rpar_gt, mod_morph,
 // tap: copy | double-tap: cut
 ZMK_BEHAVIOR(copy_cut, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LC(INS)>, <&kp LC(X)>;
+    bindings = <&kp LCMD(INS)>, <&kp LCMD(X)>;
 )
 
 // Windows sleep key
@@ -262,9 +262,9 @@ ZMK_LAYER(base,
 //├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤─────────────┤    ├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼────────────────┤──────────┤
     &kp ESC       &hml LCTRL A   &hml LALT S   &hml LCMD D   &hml LSHIFT F  &kp G        &kp END            &kp PG_DN      &kp H       &hmr RSHIFT J  &hmr RCMD K   &hmr RALT L &hmr RCTRL SEMI   &kp SQT
 //├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╭─────────────┴────┴─────────────├─────────────┼─────────────┼─────────────┼─────────────┼────────────────┤──────────┤
-    &smart_shft     &kp Z          &kp X         &kp C         &kp V          &kp B                                        &kp N          &kp M        &kp COMMA      &kp DOT      &kp FSLH      &kp ENTER
+    &smart_shft     &kp Z          &kp X         &kp C         &kp V          &kp B                                        &kp N          &kp M        &kp COMMA      &kp DOT      &kp FSLH      &swapper
 //├─────────────├─────────────┼─────────────┼─────────────┼─────────────╭─────────────╯                                ╰────────────╮┼─────────────┼─────────────┼─────────────┼────────────────┤──────────┤
-     &mo FN        &kp GRAVE      &kp CAPS      &kp LEFT      &kp RIGHT                                                                   &kp UP       &kp DOWN       &kp LBKT      &kp RBKT      &mo FN
+     &mo FN        &kp GRAVE      &kp CAPS      &kp LEFT      &swapper                                                                   &kp UP       &kp DOWN       &kp LBKT      &kp RBKT      &mo FN
 //╰─────────────┴─────────────┴─────────────┴────────────────────────────────────────────────────────────────────────────────────────┴─────────────┴─────────────┴─────────────┴────────────────┴──────────╯
                                                                            &kp LCMD     &kp RALT          &kp RALT       &kp RCMD
 //                                                        ╭─────────────╯                               │                           ╰────────────╮
