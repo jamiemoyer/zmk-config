@@ -8,8 +8,6 @@
 #endif
 
 #include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/international_chars/greek.dtsi"
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 #define DEF 0
 #define NAV 1
@@ -268,9 +266,9 @@ ZMK_LAYER(base,
 //╰─────────────┴─────────────┴─────────────┴────────────────────────────────────────────────────────────────────────────────────────┴─────────────┴─────────────┴─────────────┴────────────────┴──────────╯
                                                                            &kp LCMD     &kp RALT          &kp RALT       &kp RCMD
 //                                                        ╭─────────────╯                               │                           ╰────────────╮
-                                                             &kp SPACE    &kp DEL       NAV_LEFT    &kp UP_ARROW   &kp ENTER      &bs_del
+                                                             &kp SPACE    &kp DEL       NAV_LEFT          &kp UP_ARROW   &kp ENTER      &bs_del
 //                                                        ╰───────────────────────────╮                 │               ╭────────────────────────╯
-                                                                                        NAV_RIGHT   &kp DOWN_ARROW
+                                                                                        NAV_RIGHT         &kp DOWN_ARROW
 //                                                                                    ╰─────────────────┴───────────────╯
 )
 
