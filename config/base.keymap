@@ -138,6 +138,16 @@ ZMK_BEHAVIOR(swapper, tri_state,
     ignored-key-positions = <LT2>;
 )
 
+ZMK_BEHAVIOR(back, tri_state,
+    bindings = <&kt LCMD>, <&kp LEFT_BRACKET>, <&kt LCMD>;
+    ignored-key-positions = <LT2>;
+)
+
+ZMK_BEHAVIOR(forward, tri_state,
+    bindings = <&kt LCMD>, <&kp LEFT_BRACKET>, <&kt LCMD>;
+    ignored-key-positions = <LT2>;
+)
+
 // Sticky layer + sticky shift (workaround for issue #1421)
 ZMK_BEHAVIOR(sls, sticky_key,
     release-after-ms = <1000>;
@@ -264,7 +274,7 @@ ZMK_LAYER(base,
 //├─────────────├─────────────┼─────────────┼─────────────┼─────────────╭─────────────╯                                ╰────────────╮┼─────────────┼─────────────┼─────────────┼────────────────┤──────────┤
      &mo FN        &kp GRAVE      &kp CAPS      &kp LEFT      &swapper                                                                   &kp UP       &kp DOWN       &kp LBKT      &kp RBKT      &mo FN
 //╰─────────────┴─────────────┴─────────────┴────────────────────────────────────────────────────────────────────────────────────────┴─────────────┴─────────────┴─────────────┴────────────────┴──────────╯
-                                                                           &kp LCMD     &kp RALT          &kp RALT       &kp RCMD
+                                                                           &kp LCMD     &kp RALT          &back          &forward
 //                                                        ╭─────────────╯                               │                           ╰────────────╮
                                                              &kp SPACE    &kp DEL       NAV_LEFT          &kp UP_ARROW   &kp ENTER      &bs_del
 //                                                        ╰───────────────────────────╮                 │               ╭────────────────────────╯
