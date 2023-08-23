@@ -3,7 +3,7 @@
 HOST_ZMK_DIR=~/projects/zmk
 HOST_CONFIG_DIR=~/projects/zmk-config
 OUTPUT_DIR=~/Downloads/firmware
-LOG_DIR=~/Downloads/firmware
+LOG_DIR=~/Downloads/
 
 
 # Parse input arguments
