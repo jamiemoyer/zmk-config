@@ -144,11 +144,12 @@ ZMK_BEHAVIOR(back, tri_state,
 )
 
 ZMK_BEHAVIOR(forward, tri_state,
-    bindings = <&kt LCMD>, <&kp LEFT_BRACKET>, <&kt LCMD>;
+    bindings = <&kt LCMD>, <&kp RIGHT_BRACKET>, <&kt LCMD>;
     ignored-key-positions = <LT2>;
 )
 
 #define MEH(key) LA(LS(LC(key))) //, used like &kp MEH(Q)
+#define HYPER LA(LS(LC(LCMD)))
 
 // Sticky layer + sticky shift (workaround for issue #1421)
 ZMK_BEHAVIOR(sls, sticky_key,
@@ -274,9 +275,9 @@ ZMK_LAYER(base,
 //├─────────────├─────────────┼─────────────┼─────────────┼─────────────┼─────────────╭─────────────┴────┴─────────────├─────────────┼─────────────┼─────────────┼─────────────┼────────────────┤──────────┤
     &smart_shft     &kp Z          &kp X         &kp C         &kp V          &kp B                                        &kp N          &kp M        &kp COMMA      &kp DOT      &kp FSLH      &swapper
 //├─────────────├─────────────┼─────────────┼─────────────┼─────────────╭─────────────╯                                ╰────────────╮┼─────────────┼─────────────┼─────────────┼────────────────┤──────────┤
-     &mo FN        &kp GRAVE      &kp CAPS      &kp LEFT      &swapper                                                                   &kp UP       &kp DOWN       &kp LBKT      &kp RBKT      &kp RALT
+     &mo FN        &kp LCTRL      &kp LALT      &kp LCMD      &kp GRAVE                                                                  &kp HYPER     &kp RCMD       &kp LBKT      &kp RBKT      &kp RALT
 //╰─────────────┴─────────────┴─────────────┴────────────────────────────────────────────────────────────────────────────────────────┴─────────────┴─────────────┴─────────────┴────────────────┴──────────╯
-                                                                          &kp MEH(J)    &kp MEH(K)        &bs_del        &forward
+                                                                          &kp MEH(J)    &kp MEH(K)        &back         &forward
 //                                                        ╭─────────────╯                               │                           ╰────────────╮
                                                              &kp SPACE    &kp DEL       &kp LEFT          &kp UP_ARROW   &kp ENTER      &bs_del
 //                                                        ╰───────────────────────────╮                 │               ╭────────────────────────╯
